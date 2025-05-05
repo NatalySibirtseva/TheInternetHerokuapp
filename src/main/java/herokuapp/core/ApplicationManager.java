@@ -17,6 +17,7 @@ public class ApplicationManager {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.get("https://the-internet.herokuapp.com/");
     }
+
     protected void stop() {
         driver.quit();
     }
