@@ -27,4 +27,19 @@ public class HomePage extends BasePage {
         return new JSAlertsPage(driver, wait);
     }
 
+    @FindBy(xpath = "//a[.='Frames']")
+    WebElement liFrames;
+
+    public FramesPage getFrames() {
+        click(liFrames);
+        return new FramesPage(driver,wait);
+    }
+
+    @FindBy(xpath = "//a[.='Multiple Windows']")
+    WebElement liMultipleWindows;
+
+    public MultipleWindowsPage getMultipleWindows() {
+        click(liMultipleWindows);
+        return new MultipleWindowsPage(driver, wait);
+    }
 }
